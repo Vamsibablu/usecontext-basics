@@ -8,6 +8,7 @@ export default function User1Provider({ children }) {
   console.log("context1 provider");
   return (
     <User1Context.Provider value={{ user1, setUser1 }}>
+      {/* Children wont re render on changing state of user1 */}
       {children}
     </User1Context.Provider>
   );
